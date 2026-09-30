@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickNotes - Home</title>
+    <title>QuickNotes - About</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 4px 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,8 +23,81 @@
     </header>
 
     <main>
-        <h2>Welcome to QuickNotes</h2>
-        <p>QuickNotes is your go-to app for capturing ideas on the fly. Start writing today!</p>
+        <h2>About QuickNotes</h2>
+        <p>QuickNotes is a lightweight note-taking app designed to help you capture thoughts, tasks, and ideas without friction. It keeps your notes organized and instantly searchable so you never lose an important idea again.</p>
+
+        <section>
+            <h3>How to use QuickNotes</h3>
+            <ol>
+                <li>Open QuickNotes in your browser.</li>
+                <li>Click the "New Note" button to start a fresh note.</li>
+                <li>Type your content and format it using the toolbar.</li>
+                <li>Press Save to store your note automatically.</li>
+                <li>Use the search bar to find any note by keyword.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Features</h3>
+            <ul>
+                <li>Instant note creation</li>
+                <li>Full-text search</li>
+                <li>Dark and light themes</li>
+                <li>Markdown support</li>
+                <li>Cloud sync across devices</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Keyboard shortcuts</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Shortcut</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ctrl + N</td>
+                        <td>Create a new note</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + S</td>
+                        <td>Save the current note</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + F</td>
+                        <td>Search notes</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + D</td>
+                        <td>Delete the current note</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Send feedback</h3>
+            <form action="#" method="post">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" cols="30" required></textarea>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+        </section>
     </main>
 
     <footer>
