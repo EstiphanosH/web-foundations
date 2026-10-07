@@ -1,0 +1,223 @@
+/* ============================================================
+   1. THEME VARIABLES (light is the default)
+   ============================================================ */
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --text: #222222;
+  --muted: #64748b;
+  --border: #cbd5e1;
+  --accent: #0ba184;
+  --accent-hover: #088a70;
+  --header-bg: #8e0000;
+  --header-text: #ffffff;
+  --warning: #d97706;   /* orange */
+  --over: #dc2626;      /* red */
+}
+
+/* Dark theme only redefines the variables */
+body.dark {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
+  --accent: #14b8a6;
+  --accent-hover: #0d9488;
+  --header-bg: #1e293b;
+  --header-text: #f1f5f9;
+  --warning: #fbbf24;
+  --over: #f87171;
+}
+
+/* ============================================================
+   2. RESET + BASE
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ============================================================
+   3. HEADER
+   ============================================================ */
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 24px 16px 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* ============================================================
+   4. NAVIGATION
+   ============================================================ */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+nav a {
+  color: var(--header-text);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav a.active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   5. MAIN + SECTION CARDS
+   ============================================================ */
+main {
+  max-width: 760px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease;
+}
+
+h2,
+h3 {
+  color: var(--header-bg);
+  margin-top: 0;
+}
+
+body.dark h2,
+body.dark h3 {
+  color: var(--accent);
+}
+
+/* ============================================================
+   6. TEXTAREA + COUNTERS
+   ============================================================ */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+  background-color: var(--surface);
+  color: var(--text);
+  resize: vertical;
+  min-height: 140px;
+}
+
+textarea:focus {
+  outline: 2px solid var(--accent);
+  border-color: var(--accent);
+}
+
+#char-count,
+#word-count {
+  margin: 6px 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Character-counter states */
+#char-count.warning {
+  color: var(--warning);
+}
+
+#char-count.over {
+  color: var(--over);
+  font-weight: bold;
+}
+
+/* ============================================================
+   7. BUTTONS
+   ============================================================ */
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--accent-hover);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* ============================================================
+   8. FOOTER
+   ============================================================ */
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 16px;
+}
+
+/* ============================================================
+   9. SMALL SCREENS
+   ============================================================ */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 12px 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  .button-row button {
+    flex: 1 1 100%;
+  }
+}
